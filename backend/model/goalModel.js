@@ -1,5 +1,11 @@
 const mongoose =require('mongoose')
-const goalModel= mongoose.Schema({
+const goalSchema= mongoose.Schema({
+    user:{
+
+        type:mongoose.Schema.Types.ObjectId,
+        requied:true,
+        ref:'User'
+    },
     text:{
         type:String,
         requied:[true,'Please add a text field']
@@ -9,4 +15,4 @@ const goalModel= mongoose.Schema({
 })
 
 
-module.exports=mongoose.model('Goal',goalModel)
+module.exports=mongoose.model('Goal',goalSchema)

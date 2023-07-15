@@ -1,6 +1,5 @@
 
 const mongoose=require('mongoose')
-console.log(process.env.MONGODB_ATLAS);
 const connectDB=async()=>{
     try {
         const conn =await mongoose.connect(process.env.MONGODB_ATLAS)
